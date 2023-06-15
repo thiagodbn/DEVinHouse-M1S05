@@ -7,28 +7,29 @@
  * Utiliza uma estrutura de repetição (while) para gerar a sequência.
  */
 
-var numero = 13 // numero que dira quantas casas rodara 
-var fibo = 0
-var thi = 0
-var n = 0
-while (fibo <= numero) {
-    console.log(fibo)
-if (numero === fibo){
-    console.log ('Finaliza')
-break;
-} else if (fibo === 0 ){
-    fibo++;
-} else if (fibo === 1){
-    console.log(fibo)
-    var thi = fibo
-    fibo++;
-}
-else {
-    fibo = thi + fibo - n ;
-    var thi = fibo
-    n++
-}
 
 
+var numero = 12; // digite o número, imprime a sequencia até o numero mais próximo dele pertencente a sequencia de Fibonacci 
+var fiboAnterior = 0;
+var fiboAtual = 1;
 
+if (numero === 0){
+    console.log(numero)
+} else {
+
+while (fiboAtual <= numero) {
+    if (fiboAnterior === 0 ){
+        console.log(fiboAnterior)
+        console.log(fiboAtual)
+        var proximoFibo = fiboAnterior + fiboAtual;
+    fiboAnterior = fiboAtual;
+    fiboAtual = proximoFibo;
+    }
+    else{ 
+    console.log(fiboAtual);
+
+    var proximoFibo = fiboAnterior + fiboAtual;
+    fiboAnterior = fiboAtual;
+    fiboAtual = proximoFibo;
+}}
 }
