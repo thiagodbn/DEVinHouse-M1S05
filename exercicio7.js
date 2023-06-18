@@ -15,14 +15,22 @@
 //             0  1  2  3  4  5  6  7  8  9   10
 let valores = [1, 2, 3, 4, 5, 6, 7, 8 ,9 ,10 ,11]
 
+console.log('Array incial ' + valores)
+
 valores.push(12, 13)  // adiciona ao final do array
 
-console.log(valores) 
+console.log('Array apos push ' + valores) //  [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
 valores.pop() // remove ultimo elemento
 
-console.log(valores)
+console.log('Array apos pop ' + valores) //  [1,2,3,4,5,6,7,8,9,10,11,12]
 
- 
+valores.unshift(0) // adiciona ao inicio do array
 
-console.log(valores.slice(3,8) )//slice([início[,fim]])
+console.log('Array apos unshift ' + valores) // [0,1,2,3,4,5,6,7,8,9,10,11,12]
+
+valores.shift() // remove do incio do array
+
+console.log('Array apos shift ' + valores) //  [1,2,3,4,5,6,7,8,9,10,11,12]
+
+console.log('Slice(3,8) ' + valores.slice(3,8) )//slice([início,fim]) [ 4, 5, 6, 7, 8 ]
